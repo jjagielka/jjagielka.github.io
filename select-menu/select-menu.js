@@ -5144,45 +5144,45 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Menu$Dropdown$Closed = {$: 'Closed'};
-var $author$project$Menu$Dropdown$Dropdown = function (a) {
+var $jjagielka$select_menu$Menu$Dropdown$Closed = {$: 'Closed'};
+var $jjagielka$select_menu$Menu$Dropdown$Dropdown = function (a) {
 	return {$: 'Dropdown', a: a};
 };
-var $author$project$Menu$Dropdown$closed = $author$project$Menu$Dropdown$Dropdown($author$project$Menu$Dropdown$Closed);
-var $author$project$Menu$init = function (name) {
-	return {drop: $author$project$Menu$Dropdown$closed, list: name};
+var $jjagielka$select_menu$Menu$Dropdown$closed = $jjagielka$select_menu$Menu$Dropdown$Dropdown($jjagielka$select_menu$Menu$Dropdown$Closed);
+var $jjagielka$select_menu$Menu$init = function (name) {
+	return {drop: $jjagielka$select_menu$Menu$Dropdown$closed, list: name};
 };
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
-var $author$project$Example$init = function (flags) {
+var $jjagielka$select_menu$Example$init = function (flags) {
 	return _Utils_Tuple2(
 		{
-			menu: $author$project$Menu$init('unique-menu-name'),
-			select: $author$project$Menu$init('unique-select-name'),
+			menu: $jjagielka$select_menu$Menu$init('unique-menu-name'),
+			select: $jjagielka$select_menu$Menu$init('unique-select-name'),
 			selected: ''
 		},
 		$elm$core$Platform$Cmd$none);
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
-var $author$project$Example$MenuMsg = function (a) {
+var $jjagielka$select_menu$Example$MenuMsg = function (a) {
 	return {$: 'MenuMsg', a: a};
 };
-var $author$project$Example$SelectMsg = function (a) {
+var $jjagielka$select_menu$Example$SelectMsg = function (a) {
 	return {$: 'SelectMsg', a: a};
 };
 var $elm$core$Platform$Cmd$map = _Platform_map;
-var $author$project$Menu$FocusMsg = function (a) {
+var $jjagielka$select_menu$Menu$FocusMsg = function (a) {
 	return {$: 'FocusMsg', a: a};
 };
-var $author$project$Menu$Dropdown$Open = {$: 'Open'};
-var $author$project$Menu$Dropdown$open = $author$project$Menu$Dropdown$Dropdown($author$project$Menu$Dropdown$Open);
-var $author$project$Menu$open = function (menu) {
+var $jjagielka$select_menu$Menu$Dropdown$Open = {$: 'Open'};
+var $jjagielka$select_menu$Menu$Dropdown$open = $jjagielka$select_menu$Menu$Dropdown$Dropdown($jjagielka$select_menu$Menu$Dropdown$Open);
+var $jjagielka$select_menu$Menu$open = function (menu) {
 	return _Utils_update(
 		menu,
-		{drop: $author$project$Menu$Dropdown$open});
+		{drop: $jjagielka$select_menu$Menu$Dropdown$open});
 };
-var $author$project$Menu$FocusList$SetFocus = function (a) {
+var $jjagielka$select_menu$Menu$FocusList$SetFocus = function (a) {
 	return {$: 'SetFocus', a: a};
 };
 var $elm$core$Basics$composeL = F3(
@@ -5210,11 +5210,11 @@ var $elm$core$Task$attempt = F2(
 						task))));
 	});
 var $elm$browser$Browser$Dom$focus = _Browser_call('focus');
-var $author$project$Menu$FocusList$makeId = F2(
+var $jjagielka$select_menu$Menu$FocusList$makeId = F2(
 	function (name, i) {
 		return name + ('-' + $elm$core$String$fromInt(i));
 	});
-var $author$project$Menu$FocusList$update = F2(
+var $jjagielka$select_menu$Menu$FocusList$update = F2(
 	function (msg, name) {
 		if (msg.$ === 'SetFocus') {
 			if (msg.a.$ === 'Just') {
@@ -5222,7 +5222,7 @@ var $author$project$Menu$FocusList$update = F2(
 				return A2(
 					$elm$core$Task$attempt,
 					function (_v1) {
-						return $author$project$Menu$FocusList$SetFocus($elm$core$Maybe$Nothing);
+						return $jjagielka$select_menu$Menu$FocusList$SetFocus($elm$core$Maybe$Nothing);
 					},
 					$elm$browser$Browser$Dom$focus(target));
 			} else {
@@ -5233,13 +5233,13 @@ var $author$project$Menu$FocusList$update = F2(
 			return A2(
 				$elm$core$Task$attempt,
 				function (_v3) {
-					return $author$project$Menu$FocusList$SetFocus($elm$core$Maybe$Nothing);
+					return $jjagielka$select_menu$Menu$FocusList$SetFocus($elm$core$Maybe$Nothing);
 				},
 				$elm$browser$Browser$Dom$focus(
-					A2($author$project$Menu$FocusList$makeId, name, 0)));
+					A2($jjagielka$select_menu$Menu$FocusList$makeId, name, 0)));
 		}
 	});
-var $author$project$Menu$update = F2(
+var $jjagielka$select_menu$Menu$update = F2(
 	function (msg, model) {
 		update:
 		while (true) {
@@ -5257,41 +5257,41 @@ var $author$project$Menu$update = F2(
 						model,
 						A2(
 							$elm$core$Platform$Cmd$map,
-							$author$project$Menu$FocusMsg,
-							A2($author$project$Menu$FocusList$update, subMsg, model.list)));
+							$jjagielka$select_menu$Menu$FocusMsg,
+							A2($jjagielka$select_menu$Menu$FocusList$update, subMsg, model.list)));
 				default:
 					var subMsg = msg.a;
-					var $temp$msg = $author$project$Menu$FocusMsg(subMsg),
-						$temp$model = $author$project$Menu$open(model);
+					var $temp$msg = $jjagielka$select_menu$Menu$FocusMsg(subMsg),
+						$temp$model = $jjagielka$select_menu$Menu$open(model);
 					msg = $temp$msg;
 					model = $temp$model;
 					continue update;
 			}
 		}
 	});
-var $author$project$Example$update = F2(
+var $jjagielka$select_menu$Example$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
 			case 'MenuMsg':
 				var subMsg = msg.a;
-				var _v1 = A2($author$project$Menu$update, subMsg, model.menu);
+				var _v1 = A2($jjagielka$select_menu$Menu$update, subMsg, model.menu);
 				var menu = _v1.a;
 				var cmd = _v1.b;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{menu: menu}),
-					A2($elm$core$Platform$Cmd$map, $author$project$Example$MenuMsg, cmd));
+					A2($elm$core$Platform$Cmd$map, $jjagielka$select_menu$Example$MenuMsg, cmd));
 			case 'SelectMsg':
 				var subMsg = msg.a;
-				var _v2 = A2($author$project$Menu$update, subMsg, model.select);
+				var _v2 = A2($jjagielka$select_menu$Menu$update, subMsg, model.select);
 				var select = _v2.a;
 				var cmd = _v2.b;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{select: select}),
-					A2($elm$core$Platform$Cmd$map, $author$project$Example$SelectMsg, cmd));
+					A2($elm$core$Platform$Cmd$map, $jjagielka$select_menu$Example$SelectMsg, cmd));
 			default:
 				var value = msg.a;
 				return _Utils_Tuple2(
@@ -5302,7 +5302,7 @@ var $author$project$Example$update = F2(
 		}
 	});
 var $elm$html$Html$b = _VirtualDom_node('b');
-var $author$project$Example$css = '\n    .menu {\n        margin: 19px 0px;\n        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n        width: 20.5em;\n    }\n\n    .select {\n        margin: 10px 0px;\n        border: 1px solid lightgray;\n        width: 14.5em;\n    }\n\n    .item { \n        background-color: white;\n        padding: 5px 10px;\n        border: none;\n        text-align: left;\n        color: #333;\n        display: inline-block;\n    }\n    .item:hover {\n        background-color: lightgray;\n    }\n    .item:focus {\n        background-color: #333;\n        color: white;\n        outline: none;\n    }\n\n    /* black navigation bar */\n    ul {\n        list-style-type: none;\n        margin: 0;\n        padding: 0;\n        background-color: #333;\n    }\n    li {\n        display: inline;\n    }\n    li  a {\n        display: inline-block;\n        color: white;\n        text-align: center;\n        padding: 14px 16px;\n        text-decoration: none;\n    }\n    li a:hover {\n        background-color: #111;\n    }\n    ';
+var $jjagielka$select_menu$Example$css = '\n    .menu {\n        margin: 19px 0px;\n        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n        width: 20.5em;\n    }\n\n    .select {\n        margin: 10px 0px;\n        border: 1px solid lightgray;\n        width: 14.5em;\n    }\n\n    .item { \n        background-color: white;\n        padding: 5px 10px;\n        border: none;\n        text-align: left;\n        color: #333;\n        display: inline-block;\n        text-decoration: none;\n    }\n    .item:hover {\n        background-color: lightgray;\n    }\n    .item:focus {\n        background-color: #333;\n        color: white;\n        outline: none;\n    }\n\n    /* black navigation bar */\n    ul {\n        list-style-type: none;\n        margin: 0;\n        padding: 0;\n        background-color: #333;\n    }\n    li {\n        display: inline;\n    }\n    li  a {\n        display: inline-block;\n        color: white;\n        text-align: center;\n        padding: 14px 16px;\n        text-decoration: none;\n    }\n    li a:hover {\n        background-color: #111;\n    }\n    ';
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$virtual_dom$VirtualDom$node = function (tag) {
 	return _VirtualDom_node(
@@ -5326,22 +5326,22 @@ var $elm$html$Html$Attributes$href = function (url) {
 		_VirtualDom_noJavaScriptUri(url));
 };
 var $elm$html$Html$li = _VirtualDom_node('li');
-var $author$project$Menu$FocusList$Anchor = function (a) {
+var $jjagielka$select_menu$Menu$FocusList$Anchor = function (a) {
 	return {$: 'Anchor', a: a};
 };
-var $author$project$Menu$link = F3(
+var $jjagielka$select_menu$Menu$link = F3(
 	function (path, attrs, children) {
-		return $author$project$Menu$FocusList$Anchor(
+		return $jjagielka$select_menu$Menu$FocusList$Anchor(
 			_Utils_Tuple3(path, attrs, children));
 	});
 var $elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
 var $elm$html$Html$map = $elm$virtual_dom$VirtualDom$map;
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Menu$DropMsg = function (a) {
+var $jjagielka$select_menu$Menu$DropMsg = function (a) {
 	return {$: 'DropMsg', a: a};
 };
-var $author$project$Menu$SelectFirst = function (a) {
+var $jjagielka$select_menu$Menu$SelectFirst = function (a) {
 	return {$: 'SelectFirst', a: a};
 };
 var $elm$core$Basics$composeR = F3(
@@ -5379,36 +5379,36 @@ var $elm$html$Html$Events$onMouseDown = function (msg) {
 		'mousedown',
 		$elm$json$Json$Decode$succeed(msg));
 };
-var $author$project$Menu$Dropdown$toggle = function (_v0) {
+var $jjagielka$select_menu$Menu$Dropdown$toggle = function (_v0) {
 	var drop = _v0.a;
 	if (drop.$ === 'Closed') {
-		return $author$project$Menu$Dropdown$open;
+		return $jjagielka$select_menu$Menu$Dropdown$open;
 	} else {
-		return $author$project$Menu$Dropdown$closed;
+		return $jjagielka$select_menu$Menu$Dropdown$closed;
 	}
 };
-var $author$project$Menu$Dropdown$trigger = F2(
+var $jjagielka$select_menu$Menu$Dropdown$trigger = F2(
 	function (toMsg, drop) {
 		return _List_fromArray(
 			[
 				$elm$html$Html$Events$onMouseDown(
 				toMsg(
-					$author$project$Menu$Dropdown$toggle(drop))),
+					$jjagielka$select_menu$Menu$Dropdown$toggle(drop))),
 				$elm$html$Html$Events$onFocus(
 				toMsg(
-					$author$project$Menu$Dropdown$toggle(drop))),
+					$jjagielka$select_menu$Menu$Dropdown$toggle(drop))),
 				$elm$html$Html$Events$onBlur(
-				toMsg($author$project$Menu$Dropdown$closed))
+				toMsg($jjagielka$select_menu$Menu$Dropdown$closed))
 			]);
 	});
-var $author$project$Menu$FocusList$DownArrow = {$: 'DownArrow'};
-var $author$project$Menu$FocusList$SelectFirst = {$: 'SelectFirst'};
+var $jjagielka$select_menu$Menu$FocusList$DownArrow = {$: 'DownArrow'};
+var $jjagielka$select_menu$Menu$FocusList$SelectFirst = {$: 'SelectFirst'};
 var $elm$json$Json$Decode$fail = _Json_fail;
-var $author$project$Menu$FocusList$isKey = F3(
+var $jjagielka$select_menu$Menu$FocusList$isKey = F3(
 	function (pattern, tagger, key) {
 		return _Utils_eq(pattern, key) ? $elm$json$Json$Decode$succeed(tagger) : $elm$json$Json$Decode$fail('not my key');
 	});
-var $author$project$Menu$FocusList$UpArrow = {$: 'UpArrow'};
+var $jjagielka$select_menu$Menu$FocusList$UpArrow = {$: 'UpArrow'};
 var $elm$json$Json$Decode$andThen = _Json_andThen;
 var $elm$json$Json$Decode$field = _Json_decodeField;
 var $elm$json$Json$Decode$int = _Json_decodeInt;
@@ -5423,20 +5423,20 @@ var $elm$html$Html$Events$preventDefaultOn = F2(
 			event,
 			$elm$virtual_dom$VirtualDom$MayPreventDefault(decoder));
 	});
-var $author$project$Menu$FocusList$Escape = {$: 'Escape'};
-var $author$project$Menu$FocusList$toKey = function (key) {
+var $jjagielka$select_menu$Menu$FocusList$Escape = {$: 'Escape'};
+var $jjagielka$select_menu$Menu$FocusList$toKey = function (key) {
 	switch (key) {
 		case 38:
-			return $elm$json$Json$Decode$succeed($author$project$Menu$FocusList$UpArrow);
+			return $elm$json$Json$Decode$succeed($jjagielka$select_menu$Menu$FocusList$UpArrow);
 		case 40:
-			return $elm$json$Json$Decode$succeed($author$project$Menu$FocusList$DownArrow);
+			return $elm$json$Json$Decode$succeed($jjagielka$select_menu$Menu$FocusList$DownArrow);
 		case 27:
-			return $elm$json$Json$Decode$succeed($author$project$Menu$FocusList$Escape);
+			return $elm$json$Json$Decode$succeed($jjagielka$select_menu$Menu$FocusList$Escape);
 		default:
 			return $elm$json$Json$Decode$fail('not interested in');
 	}
 };
-var $author$project$Menu$FocusList$preventOnArrows = function (decoder) {
+var $jjagielka$select_menu$Menu$FocusList$preventOnArrows = function (decoder) {
 	return A2(
 		$elm$html$Html$Events$preventDefaultOn,
 		'keydown',
@@ -5448,31 +5448,31 @@ var $author$project$Menu$FocusList$preventOnArrows = function (decoder) {
 					function (msg) {
 						return _Utils_Tuple2(
 							msg,
-							_Utils_eq(key, $author$project$Menu$FocusList$DownArrow) || _Utils_eq(key, $author$project$Menu$FocusList$UpArrow));
+							_Utils_eq(key, $jjagielka$select_menu$Menu$FocusList$DownArrow) || _Utils_eq(key, $jjagielka$select_menu$Menu$FocusList$UpArrow));
 					},
 					decoder(key));
 			},
-			A2($elm$json$Json$Decode$andThen, $author$project$Menu$FocusList$toKey, $elm$html$Html$Events$keyCode)));
+			A2($elm$json$Json$Decode$andThen, $jjagielka$select_menu$Menu$FocusList$toKey, $elm$html$Html$Events$keyCode)));
 };
-var $author$project$Menu$FocusList$trigger = function (toMsg) {
-	return $author$project$Menu$FocusList$preventOnArrows(
+var $jjagielka$select_menu$Menu$FocusList$trigger = function (toMsg) {
+	return $jjagielka$select_menu$Menu$FocusList$preventOnArrows(
 		A2(
-			$author$project$Menu$FocusList$isKey,
-			$author$project$Menu$FocusList$DownArrow,
-			toMsg($author$project$Menu$FocusList$SelectFirst)));
+			$jjagielka$select_menu$Menu$FocusList$isKey,
+			$jjagielka$select_menu$Menu$FocusList$DownArrow,
+			toMsg($jjagielka$select_menu$Menu$FocusList$SelectFirst)));
 };
-var $author$project$Menu$trigger = F2(
+var $jjagielka$select_menu$Menu$trigger = F2(
 	function (toMsg, menu) {
 		return A2(
 			$elm$core$List$cons,
 			$elm$html$Html$Attributes$id(menu.list),
 			A2(
 				$elm$core$List$cons,
-				$author$project$Menu$FocusList$trigger(
-					A2($elm$core$Basics$composeR, $author$project$Menu$SelectFirst, toMsg)),
+				$jjagielka$select_menu$Menu$FocusList$trigger(
+					A2($elm$core$Basics$composeR, $jjagielka$select_menu$Menu$SelectFirst, toMsg)),
 				A2(
-					$author$project$Menu$Dropdown$trigger,
-					A2($elm$core$Basics$composeR, $author$project$Menu$DropMsg, toMsg),
+					$jjagielka$select_menu$Menu$Dropdown$trigger,
+					A2($elm$core$Basics$composeR, $jjagielka$select_menu$Menu$DropMsg, toMsg),
 					menu.drop)));
 	});
 var $elm$html$Html$ul = _VirtualDom_node('ul');
@@ -5491,7 +5491,7 @@ var $elm$json$Json$Decode$nullable = function (decoder) {
 			]));
 };
 var $elm$json$Json$Decode$string = _Json_decodeString;
-var $author$project$Menu$FocusList$nextFocusDecoder = F2(
+var $jjagielka$select_menu$Menu$FocusList$nextFocusDecoder = F2(
 	function (name, key) {
 		switch (key.$) {
 			case 'DownArrow':
@@ -5511,16 +5511,16 @@ var $author$project$Menu$FocusList$nextFocusDecoder = F2(
 					$elm$core$Maybe$Just(name));
 		}
 	});
-var $author$project$Menu$FocusList$onKeyDown = F2(
+var $jjagielka$select_menu$Menu$FocusList$onKeyDown = F2(
 	function (name, toMsg) {
-		return $author$project$Menu$FocusList$preventOnArrows(
+		return $jjagielka$select_menu$Menu$FocusList$preventOnArrows(
 			A2(
 				$elm$core$Basics$composeR,
-				$author$project$Menu$FocusList$nextFocusDecoder(name),
+				$jjagielka$select_menu$Menu$FocusList$nextFocusDecoder(name),
 				$elm$json$Json$Decode$map(
-					A2($elm$core$Basics$composeR, $author$project$Menu$FocusList$SetFocus, toMsg))));
+					A2($elm$core$Basics$composeR, $jjagielka$select_menu$Menu$FocusList$SetFocus, toMsg))));
 	});
-var $author$project$Menu$FocusList$selectionDecoder = function (prefix) {
+var $jjagielka$select_menu$Menu$FocusList$selectionDecoder = function (prefix) {
 	return A2(
 		$elm$json$Json$Decode$andThen,
 		function (id) {
@@ -5532,11 +5532,11 @@ var $author$project$Menu$FocusList$selectionDecoder = function (prefix) {
 					])) : A2(
 				$elm$json$Json$Decode$field,
 				'parentNode',
-				$author$project$Menu$FocusList$selectionDecoder(prefix));
+				$jjagielka$select_menu$Menu$FocusList$selectionDecoder(prefix));
 		},
 		A2($elm$json$Json$Decode$field, 'id', $elm$json$Json$Decode$string));
 };
-var $author$project$Menu$FocusList$onSelect = F2(
+var $jjagielka$select_menu$Menu$FocusList$onSelect = F2(
 	function (toMsg, name) {
 		return A2(
 			$elm$html$Html$Events$on,
@@ -5547,7 +5547,7 @@ var $author$project$Menu$FocusList$onSelect = F2(
 				A2(
 					$elm$json$Json$Decode$field,
 					'target',
-					$author$project$Menu$FocusList$selectionDecoder(name + '-'))));
+					$jjagielka$select_menu$Menu$FocusList$selectionDecoder(name + '-'))));
 	});
 var $elm$core$List$isEmpty = function (xs) {
 	if (!xs.b) {
@@ -5557,13 +5557,13 @@ var $elm$core$List$isEmpty = function (xs) {
 	}
 };
 var $elm$core$Basics$not = _Basics_not;
-var $author$project$Menu$Dropdown$onFocusIn = function (toMsg) {
+var $jjagielka$select_menu$Menu$Dropdown$onFocusIn = function (toMsg) {
 	return A2(
 		$elm$html$Html$Events$on,
 		'focusin',
 		$elm$json$Json$Decode$succeed(toMsg));
 };
-var $author$project$Menu$Dropdown$onFocusOut = function (toMsg) {
+var $jjagielka$select_menu$Menu$Dropdown$onFocusOut = function (toMsg) {
 	return A2(
 		$elm$html$Html$Events$on,
 		'focusout',
@@ -5571,20 +5571,20 @@ var $author$project$Menu$Dropdown$onFocusOut = function (toMsg) {
 };
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
-var $author$project$Menu$Dropdown$view = F4(
+var $jjagielka$select_menu$Menu$Dropdown$view = F4(
 	function (toMsg, _v0, attrs, children) {
 		var drop = _v0.a;
-		return (_Utils_eq(drop, $author$project$Menu$Dropdown$Open) && (!$elm$core$List$isEmpty(children))) ? A2(
+		return (_Utils_eq(drop, $jjagielka$select_menu$Menu$Dropdown$Open) && (!$elm$core$List$isEmpty(children))) ? A2(
 			$elm$html$Html$div,
 			_List_fromArray(
 				[
 					$elm$html$Html$Attributes$class('drop'),
 					A2($elm$html$Html$Attributes$style, 'position', 'relative'),
 					A2($elm$html$Html$Attributes$style, 'display', 'inline-block'),
-					$author$project$Menu$Dropdown$onFocusOut(
-					toMsg($author$project$Menu$Dropdown$closed)),
-					$author$project$Menu$Dropdown$onFocusIn(
-					toMsg($author$project$Menu$Dropdown$open))
+					$jjagielka$select_menu$Menu$Dropdown$onFocusOut(
+					toMsg($jjagielka$select_menu$Menu$Dropdown$closed)),
+					$jjagielka$select_menu$Menu$Dropdown$onFocusIn(
+					toMsg($jjagielka$select_menu$Menu$Dropdown$open))
 				]),
 			_List_fromArray(
 				[
@@ -5607,7 +5607,7 @@ var $elm$html$Html$Attributes$tabindex = function (n) {
 		$elm$core$String$fromInt(n));
 };
 var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
-var $author$project$Menu$FocusList$itemToLink = F3(
+var $jjagielka$select_menu$Menu$FocusList$itemToLink = F3(
 	function (name, i, item) {
 		if (item.$ === 'Anchor') {
 			var _v1 = item.a;
@@ -5620,7 +5620,7 @@ var $author$project$Menu$FocusList$itemToLink = F3(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$id(
-							A2($author$project$Menu$FocusList$makeId, name, i)),
+							A2($jjagielka$select_menu$Menu$FocusList$makeId, name, i)),
 							$elm$html$Html$Attributes$tabindex(-1),
 							$elm$html$Html$Attributes$href(url),
 							A2($elm$html$Html$Attributes$style, 'display', 'block')
@@ -5638,7 +5638,7 @@ var $author$project$Menu$FocusList$itemToLink = F3(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$id(
-							A2($author$project$Menu$FocusList$makeId, name, i)),
+							A2($jjagielka$select_menu$Menu$FocusList$makeId, name, i)),
 							$elm$html$Html$Attributes$tabindex(-1),
 							$elm$html$Html$Attributes$href('#'),
 							A2($elm$html$Html$Attributes$style, 'display', 'block'),
@@ -5648,36 +5648,36 @@ var $author$project$Menu$FocusList$itemToLink = F3(
 				children);
 		}
 	});
-var $author$project$Menu$FocusList$view = F2(
+var $jjagielka$select_menu$Menu$FocusList$view = F2(
 	function (name, children) {
 		return A2(
 			$elm$core$List$indexedMap,
-			$author$project$Menu$FocusList$itemToLink(name),
+			$jjagielka$select_menu$Menu$FocusList$itemToLink(name),
 			children);
 	});
-var $author$project$Menu$view = F3(
+var $jjagielka$select_menu$Menu$view = F3(
 	function (_v0, attrs, children) {
 		var drop = _v0.drop;
 		var list = _v0.list;
 		return A4(
-			$author$project$Menu$Dropdown$view,
-			$author$project$Menu$DropMsg,
+			$jjagielka$select_menu$Menu$Dropdown$view,
+			$jjagielka$select_menu$Menu$DropMsg,
 			drop,
 			A2(
 				$elm$core$List$cons,
-				A2($author$project$Menu$FocusList$onKeyDown, list, $author$project$Menu$FocusMsg),
+				A2($jjagielka$select_menu$Menu$FocusList$onKeyDown, list, $jjagielka$select_menu$Menu$FocusMsg),
 				A2(
 					$elm$core$List$cons,
 					A2(
-						$author$project$Menu$FocusList$onSelect,
+						$jjagielka$select_menu$Menu$FocusList$onSelect,
 						function (_v1) {
-							return $author$project$Menu$DropMsg($author$project$Menu$Dropdown$closed);
+							return $jjagielka$select_menu$Menu$DropMsg($jjagielka$select_menu$Menu$Dropdown$closed);
 						},
 						list),
 					attrs)),
-			A2($author$project$Menu$FocusList$view, list, children));
+			A2($jjagielka$select_menu$Menu$FocusList$view, list, children));
 	});
-var $author$project$Example$simpleMenu = function (_v0) {
+var $jjagielka$select_menu$Example$simpleMenu = function (_v0) {
 	var menu = _v0.menu;
 	return A2(
 		$elm$html$Html$ul,
@@ -5704,9 +5704,9 @@ var $author$project$Example$simpleMenu = function (_v0) {
 					[
 						A2(
 						$elm$html$Html$map,
-						$author$project$Example$MenuMsg,
+						$jjagielka$select_menu$Example$MenuMsg,
 						A3(
-							$author$project$Menu$view,
+							$jjagielka$select_menu$Menu$view,
 							menu,
 							_List_fromArray(
 								[
@@ -5715,7 +5715,7 @@ var $author$project$Example$simpleMenu = function (_v0) {
 							_List_fromArray(
 								[
 									A3(
-									$author$project$Menu$link,
+									$jjagielka$select_menu$Menu$link,
 									'#popular',
 									_List_fromArray(
 										[
@@ -5726,7 +5726,7 @@ var $author$project$Example$simpleMenu = function (_v0) {
 											$elm$html$Html$text('Popular')
 										])),
 									A3(
-									$author$project$Menu$link,
+									$jjagielka$select_menu$Menu$link,
 									'#viewed',
 									_List_fromArray(
 										[
@@ -5737,7 +5737,7 @@ var $author$project$Example$simpleMenu = function (_v0) {
 											$elm$html$Html$text('Most viewed')
 										])),
 									A3(
-									$author$project$Menu$link,
+									$jjagielka$select_menu$Menu$link,
 									'#rated',
 									_List_fromArray(
 										[
@@ -5753,7 +5753,7 @@ var $author$project$Example$simpleMenu = function (_v0) {
 						A2(
 							$elm$core$List$cons,
 							$elm$html$Html$Attributes$href('#'),
-							A2($author$project$Menu$trigger, $author$project$Example$MenuMsg, menu)),
+							A2($jjagielka$select_menu$Menu$trigger, $jjagielka$select_menu$Example$MenuMsg, menu)),
 						_List_fromArray(
 							[
 								$elm$html$Html$text(' Videos ')
@@ -5777,41 +5777,41 @@ var $author$project$Example$simpleMenu = function (_v0) {
 					]))
 			]));
 };
-var $author$project$Example$Selected = function (a) {
+var $jjagielka$select_menu$Example$Selected = function (a) {
 	return {$: 'Selected', a: a};
 };
 var $elm$html$Html$button = _VirtualDom_node('button');
-var $author$project$Menu$FocusList$Button = function (a) {
+var $jjagielka$select_menu$Menu$FocusList$Button = function (a) {
 	return {$: 'Button', a: a};
 };
-var $author$project$Menu$button = F3(
+var $jjagielka$select_menu$Menu$button = F3(
 	function (value, attrs, children) {
-		return $author$project$Menu$FocusList$Button(
+		return $jjagielka$select_menu$Menu$FocusList$Button(
 			_Utils_Tuple3(value, attrs, children));
 	});
 var $elm$html$Html$i = _VirtualDom_node('i');
-var $author$project$Menu$onSelect = F2(
+var $jjagielka$select_menu$Menu$onSelect = F2(
 	function (toMsg, _v0) {
 		var drop = _v0.drop;
 		var list = _v0.list;
-		return A2($author$project$Menu$FocusList$onSelect, toMsg, list);
+		return A2($jjagielka$select_menu$Menu$FocusList$onSelect, toMsg, list);
 	});
 var $elm$html$Html$span = _VirtualDom_node('span');
-var $author$project$Example$simpleSelect = function (_v0) {
+var $jjagielka$select_menu$Example$simpleSelect = function (_v0) {
 	var select = _v0.select;
 	return A2(
 		$elm$html$Html$span,
 		_List_fromArray(
 			[
-				A2($author$project$Menu$onSelect, $author$project$Example$Selected, select)
+				A2($jjagielka$select_menu$Menu$onSelect, $jjagielka$select_menu$Example$Selected, select)
 			]),
 		_List_fromArray(
 			[
 				A2(
 				$elm$html$Html$map,
-				$author$project$Example$SelectMsg,
+				$jjagielka$select_menu$Example$SelectMsg,
 				A3(
-					$author$project$Menu$view,
+					$jjagielka$select_menu$Menu$view,
 					select,
 					_List_fromArray(
 						[
@@ -5820,7 +5820,7 @@ var $author$project$Example$simpleSelect = function (_v0) {
 					_List_fromArray(
 						[
 							A3(
-							$author$project$Menu$button,
+							$jjagielka$select_menu$Menu$button,
 							' ',
 							_List_fromArray(
 								[
@@ -5837,7 +5837,7 @@ var $author$project$Example$simpleSelect = function (_v0) {
 										]))
 								])),
 							A3(
-							$author$project$Menu$button,
+							$jjagielka$select_menu$Menu$button,
 							'C',
 							_List_fromArray(
 								[
@@ -5848,7 +5848,7 @@ var $author$project$Example$simpleSelect = function (_v0) {
 									$elm$html$Html$text('Continental')
 								])),
 							A3(
-							$author$project$Menu$button,
+							$jjagielka$select_menu$Menu$button,
 							'E',
 							_List_fromArray(
 								[
@@ -5859,7 +5859,7 @@ var $author$project$Example$simpleSelect = function (_v0) {
 									$elm$html$Html$text('English')
 								])),
 							A3(
-							$author$project$Menu$button,
+							$jjagielka$select_menu$Menu$button,
 							'A',
 							_List_fromArray(
 								[
@@ -5872,14 +5872,14 @@ var $author$project$Example$simpleSelect = function (_v0) {
 						]))),
 				A2(
 				$elm$html$Html$button,
-				A2($author$project$Menu$trigger, $author$project$Example$SelectMsg, select),
+				A2($jjagielka$select_menu$Menu$trigger, $jjagielka$select_menu$Example$SelectMsg, select),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('What\'s your breakfast type?')
 					]))
 			]));
 };
-var $author$project$Example$view = function (model) {
+var $jjagielka$select_menu$Example$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_List_Nil,
@@ -5891,7 +5891,7 @@ var $author$project$Example$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text($author$project$Example$css)
+						$elm$html$Html$text($jjagielka$select_menu$Example$css)
 					])),
 				A2(
 				$elm$html$Html$div,
@@ -5902,7 +5902,7 @@ var $author$project$Example$view = function (model) {
 					]),
 				_List_fromArray(
 					[
-						$author$project$Example$simpleMenu(model)
+						$jjagielka$select_menu$Example$simpleMenu(model)
 					])),
 				A2(
 				$elm$html$Html$div,
@@ -5914,7 +5914,7 @@ var $author$project$Example$view = function (model) {
 					]),
 				_List_fromArray(
 					[
-						$author$project$Example$simpleSelect(model),
+						$jjagielka$select_menu$Example$simpleSelect(model),
 						A2(
 						$elm$html$Html$b,
 						_List_Nil,
@@ -5926,14 +5926,14 @@ var $author$project$Example$view = function (model) {
 					]))
 			]));
 };
-var $author$project$Example$main = $elm$browser$Browser$element(
+var $jjagielka$select_menu$Example$main = $elm$browser$Browser$element(
 	{
-		init: $author$project$Example$init,
+		init: $jjagielka$select_menu$Example$init,
 		subscriptions: function (_v0) {
 			return $elm$core$Platform$Sub$none;
 		},
-		update: $author$project$Example$update,
-		view: $author$project$Example$view
+		update: $jjagielka$select_menu$Example$update,
+		view: $jjagielka$select_menu$Example$view
 	});
-_Platform_export({'Example':{'init':$author$project$Example$main(
+_Platform_export({'Example':{'init':$jjagielka$select_menu$Example$main(
 	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
