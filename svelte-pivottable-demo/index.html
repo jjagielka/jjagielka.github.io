@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>Svelte pivottable</title><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" data-svelte="svelte-1omrg1w"><link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet" data-svelte="svelte-1omrg1w"><script src="https://cdn.plot.ly/plotly-basic-latest.min.js" data-svelte="svelte-1omrg1w"></script>
+	<link rel="stylesheet" href="/_app/assets/pages/index.svelte-aaff40ed.css">
+	<link rel="modulepreload" href="/_app/start-1bd472b2.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-47ee1c91.js">
+	<link rel="modulepreload" href="/_app/layout.svelte-23274c75.js">
+	<link rel="modulepreload" href="/_app/pages/index.svelte-d2547747.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<nav class="navbar navbar-inverse navbar-static-top svelte-kkq9yi"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span></button>
+            
+            <a class="navbar-brand" href="#">svelte-pivottable</a></div>
+        <div id="navbar" class="navbar-collapse collapse"></div>
+        </div></nav>
+
+
+<div class="jumbotron svelte-kkq9yi"><div class="container"><h1 class="svelte-kkq9yi">svelte-pivottable</h1>
+        <p class="svelte-kkq9yi">Svelte-based drag&#39;n&#39;drop pivot table with grouping and Plotly.js charts.</p>
+        <p class="svelte-kkq9yi"><a class="btn btn-primary btn-lg svelte-kkq9yi" href="https://github.com/plotly/svelte-pivottable#readme" role="button">Get started »</a></p></div></div>
+
+<div class="container"><div class="row text-center"><div class="col-md-2 col-md-offset-3"><label class="checkbox-inline" style="text-transform: capitalize;"><input type="checkbox" checked> Grouping
+            </label></div>
+        <fieldset class="col-md-6" ><label class="checkbox-inline" style="text-transform: capitalize;"><input type="checkbox" checked> Compact Rows
+            </label>
+
+            <label class="checkbox-inline" style="text-transform: capitalize;"><input type="checkbox" checked> Rows totals above
+            </label>
+            <label class="checkbox-inline" style="text-transform: capitalize;"><input type="checkbox"> Cols totals before
+            </label></fieldset>
+        <br><br></div>
+
+    <table class="pvtUi"><tbody><tr><td class="pvtRenderers"><div class="pvtDropdown"><div class="pvtDropdownValue pvtDropdownCurrent " role="button"><div class="pvtDropdownIcon">▾</div>
+        Table</div>
+
+    </div></td>
+                <td class="pvtAxisContainer pvtUnused pvtHorizList"><div><li data-id="Age"><span class="pvtAttr ">Age
+        <span class="pvtTriangle"> 
+            ▾
+        </span></span>
+
+    </li><li data-id="Gender Imbalance"><span class="pvtAttr ">Gender Imbalance
+        <span class="pvtTriangle"> 
+            ▾
+        </span></span>
+
+    </li><li data-id="Name"><span class="pvtAttr ">Name
+        <span class="pvtTriangle"> 
+            ▾
+        </span></span>
+
+    </li></div></td></tr>
+            <tr><td class="pvtVals"><div class="pvtDropdown"><div class="pvtDropdownValue pvtDropdownCurrent " role="button"><div class="pvtDropdownIcon">▾</div>
+        Count</div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</td>
+                <td class="pvtAxisContainer pvtHorizList pvtCols"><div><li data-id="Gender"><span class="pvtAttr ">Gender
+        <span class="pvtTriangle"> 
+            ▾
+        </span></span>
+
+    </li><li data-id="Age Bin"><span class="pvtAttr ">Age Bin
+        <span class="pvtTriangle"> 
+            ▾
+        </span></span>
+
+    </li></div></td></tr>
+            <tr><td class="pvtAxisContainer pvtVertList pvtRows"><div><li data-id="Province"><span class="pvtAttr ">Province
+        <span class="pvtTriangle"> 
+            ▾
+        </span></span>
+
+    </li><li data-id="Party"><span class="pvtAttr ">Party
+        <span class="pvtTriangle"> 
+            ▾
+        </span></span>
+
+    </li></div></td>
+                <td class="pvtOutput"><table class="pvtTable rowGroupBefore colGroupAfter"><thead>
+            
+            <tr><th colspan="2" rowspan="2"></th>
+
+                <th class="pvtAxisLabel pvtClickable">Gender</th>
+                
+                    <th class="pvtColLabel pvtClickable" colspan="8" rowspan="1">Female
+                        </th>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <th class="pvtColLabel pvtClickable" colspan="8" rowspan="1">Male
+                        </th>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                <th class="pvtTotalLabel" rowspan="3">Totals
+                    </th>
+            </tr>
+            
+            <tr>
+
+                <th class="pvtAxisLabel">Age Bin</th>
+                
+                    <th class="pvtColLabel" colspan="1" rowspan="2">0
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">20
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">30
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">40
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">50
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">60
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">70
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">0
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">20
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">30
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">40
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">50
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">60
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">70
+                        </th>
+                    <th class="pvtColLabel" colspan="1" rowspan="2">
+                        </th>
+
+                
+            </tr>
+
+        <tr>
+                    
+
+                    <th class="pvtAxisLabel pvtClickable">Province
+                    </th>
+                    
+
+                    <th class="pvtAxisLabel">Party
+                    </th>
+                <th class="pvtTotalLabel"></th></tr></thead>
+
+    <tbody>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Alberta
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">7
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">23
+                    </td>
+                <td class="pvtTotal" style="">28</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">7
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">23
+                    </td>
+                <td class="pvtTotal" style="">27</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">British Columbia
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">7
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">11
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">8
+                    </td>
+                    
+                    <td class="pvtVal" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">8
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">25
+                    </td>
+                <td class="pvtTotal" style="">36</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">16
+                    </td>
+                <td class="pvtTotal" style="">21</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Green
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                <td class="pvtTotal" style="">2</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">9
+                    </td>
+                <td class="pvtTotal" style="">12</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Manitoba
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">9
+                    </td>
+                <td class="pvtTotal" style="">14</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">7
+                    </td>
+                <td class="pvtTotal" style="">11</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">2</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">New Brunswick
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">9
+                    </td>
+                <td class="pvtTotal" style="">10</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">7
+                    </td>
+                <td class="pvtTotal" style="">8</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Newfoundland and Labrador
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">6
+                    </td>
+                <td class="pvtTotal" style="">7</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">3
+                    </td>
+                <td class="pvtTotal" style="">4</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">2
+                    </td>
+                <td class="pvtTotal" style="">2</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Nova Scotia
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">10
+                    </td>
+                <td class="pvtTotal" style="">11</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">4
+                    </td>
+                <td class="pvtTotal" style="">4</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">4
+                    </td>
+                <td class="pvtTotal" style="">4</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">2
+                    </td>
+                <td class="pvtTotal" style="">3</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Ontario
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">19
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">23
+                    </td>
+                    
+                    <td class="pvtVal" style="">30
+                    </td>
+                    
+                    <td class="pvtVal" style="">24
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">87
+                    </td>
+                <td class="pvtTotal" style="">106</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">10
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">18
+                    </td>
+                    
+                    <td class="pvtVal" style="">20
+                    </td>
+                    
+                    <td class="pvtVal" style="">16
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">63
+                    </td>
+                <td class="pvtTotal" style="">73</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">8
+                    </td>
+                <td class="pvtTotal" style="">11</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">6
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">16
+                    </td>
+                <td class="pvtTotal" style="">22</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Prince Edward Island
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">3
+                    </td>
+                <td class="pvtTotal" style="">4</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">3
+                    </td>
+                <td class="pvtTotal" style="">3</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Quebec
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">12
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">7
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">28
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">7
+                    </td>
+                    
+                    <td class="pvtVal" style="">15
+                    </td>
+                    
+                    <td class="pvtVal" style="">16
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">47
+                    </td>
+                <td class="pvtTotal" style="">75</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Bloc Quebecois
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">3
+                    </td>
+                <td class="pvtTotal" style="">4</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">5
+                    </td>
+                <td class="pvtTotal" style="">5</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">7
+                    </td>
+                <td class="pvtTotal" style="">7</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">12
+                    </td>
+                    
+                    <td class="pvtVal" style="">3
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">7
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">27
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">9
+                    </td>
+                    
+                    <td class="pvtVal" style="">12
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">32
+                    </td>
+                <td class="pvtTotal" style="">59</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Saskatchewan
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">5
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">12
+                    </td>
+                <td class="pvtTotal" style="">14</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">2
+                    </td>
+                    
+                    <td class="pvtVal" style="">4
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">11
+                    </td>
+                <td class="pvtTotal" style="">13</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Liberal
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+            
+
+            <tr class="pvtLevel1">
+                    
+                    <th class="pvtRowLabel pvtClickable" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 0 * var(--pvt-row-indent, 20px));">Territories
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">2
+                    </td>
+                <td class="pvtTotal" style="">3</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">Conservative
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">2</td>
+            </tr>
+            
+
+            <tr class="pvtData">
+                    
+                    
+                    
+                    <th class="pvtRowLabel" rowspan="1" colspan="3" style="padding-left: calc(var(--pvt-row-padding, 5px) + 1 * var(--pvt-row-indent, 20px));">NDP
+                        </th>
+                
+
+                
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">1
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal" style="">
+                    </td>
+                    
+                    <td class="pvtVal pvtLevel1" style="">1
+                    </td>
+                <td class="pvtTotal" style="">1</td>
+            </tr>
+        <tr><th class="pvtTotalLabel" colspan="3">Totals
+            </th>
+
+            
+                
+
+                <td class="pvtTotal" style="">2
+                </td>
+                
+
+                <td class="pvtTotal" style="">12
+                </td>
+                
+
+                <td class="pvtTotal" style="">8
+                </td>
+                
+
+                <td class="pvtTotal" style="">12
+                </td>
+                
+
+                <td class="pvtTotal" style="">24
+                </td>
+                
+
+                <td class="pvtTotal" style="">14
+                </td>
+                
+
+                <td class="pvtTotal" style="">3
+                </td>
+                
+
+                <td class="pvtTotal pvtLevel1" style="">75
+                </td>
+                
+
+                <td class="pvtTotal" style="">1
+                </td>
+                
+
+                <td class="pvtTotal" style="">4
+                </td>
+                
+
+                <td class="pvtTotal" style="">26
+                </td>
+                
+
+                <td class="pvtTotal" style="">68
+                </td>
+                
+
+                <td class="pvtTotal" style="">73
+                </td>
+                
+
+                <td class="pvtTotal" style="">55
+                </td>
+                
+
+                <td class="pvtTotal" style="">6
+                </td>
+                
+
+                <td class="pvtTotal pvtLevel1" style="">233
+                </td>
+            <td class="pvtGrandTotal">308</td></tr></tbody></table></td></tr></tbody></table>
+
+    <hr>
+    <footer style="text-align: center"><p class="svelte-kkq9yi">© 2022 Jakub Jagielka</p></footer></div>
+
+
+
+
+		<script type="module" data-hydrate="1ft7i1r">
+		import { start } from "/_app/start-1bd472b2.js";
+		start({
+			target: document.querySelector('[data-hydrate="1ft7i1r"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/layout.svelte-23274c75.js"),
+						import("/_app/pages/index.svelte-d2547747.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>
